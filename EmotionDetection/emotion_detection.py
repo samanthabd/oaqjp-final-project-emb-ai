@@ -5,7 +5,7 @@ def emotion_detector(text_to_analyze):
     ''' Send the emotion detection request and return the results
     '''
 
-    url = 'https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/' /
+    url = 'https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/' \
           'NlpService/EmotionPredict'
 
     myobj = {"raw_document": {"text": text_to_analyze}}
