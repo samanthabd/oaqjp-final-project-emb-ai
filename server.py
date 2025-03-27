@@ -18,10 +18,9 @@ def sent_detector():
 
     response = emotion_detector(text_to_analyze)
 
-    if response['dominant_emotion'] == None:
+    if response['dominant_emotion'] is None:
         return "Invalid text! Please try again"
 
-    # Return a formatted string with the emotion label and score
     return (
         f"For the given statement, the system response is "
         f"'anger': {response['anger']}, 'disgust': {response['disgust']}, "

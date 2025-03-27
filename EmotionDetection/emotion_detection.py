@@ -1,3 +1,5 @@
+''' Detect emotion in a string using Watson
+'''
 import json
 import requests
 
