@@ -18,13 +18,16 @@ def sent_detector():
 
     response = emotion_detector(text_to_analyze)
 
+    if response['dominant_emotion'] == None:
+        return "Invalid text! Please try again"
+
     # Return a formatted string with the emotion label and score
     return (
         f"For the given statement, the system response is "
         f"'anger': {response['anger']}, 'disgust': {response['disgust']}, "
         f"'fear': {response['fear']}, 'joy': {response['joy']} and "
         f"'sadness': {response['sadness']}. The dominant emotion is "
-        f"{response['dominant_emotion]}."
+        f"{response['dominant_emotion']}."
     )
 
 @app.route("/")
